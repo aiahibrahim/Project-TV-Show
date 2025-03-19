@@ -9,13 +9,31 @@
   </head>
 
   <body>
+    <h1>All Episodes of the TV Show</h1>
+    <div id="episode-container"></div>
+
+    <!-- Template for each episode card -->
+    <template id="episode-card-template">
+      <div class="episode-card">
+        <h3><span class="episode-name"></span> <span class="episode-number"></span></h3>
+        <img src="" alt="Episode Image" />
+        <p data-summary></p>
+      </div>
+    </template>
+
+    <!-- TVMaze Credits Section -->
+    <footer>
+      <p>
+        Data provided by <a href="https://www.tvmaze.com/" target="_blank">TVMaze.com</a>
+      </p>
+    </footer>
     <div id="root">
     </div>
 
     <!-- Loads a provided function called getAllEpisodes() which returns all episodes -->
-    <script src="episodes.js"></script>
+    <script src="episodes.js" defer></script>
 
     <!-- Loads YOUR javascript code -->
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
   </body>
 </html>
