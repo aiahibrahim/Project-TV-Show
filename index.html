@@ -10,6 +10,21 @@
 
   <body>
     <h1>All Episodes of the TV Show</h1>
+    <label>
+      Search <input type="search" id="q" name="q" placeholder="Search term"  /> 🔍
+      <datalist id="episode-datalist">
+        <!-- Options will be populated by JavaScript -->
+      </datalist>
+    </label>
+    
+    <label for="episode-select">Select an Episode:</label>
+    <select id="episode-select">
+      <option value="">All Episodes</option>
+      <!-- Options will be dynamically added via JavaScript -->
+    </select>
+     <!-- This will show how many episodes match the search -->
+     <p id="episode-count">0 episode(s) found</p>
+     
     <div id="episode-container"></div>
 
     <!-- Template for each episode card -->
