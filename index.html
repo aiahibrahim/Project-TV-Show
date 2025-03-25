@@ -1,54 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TV Show Project | Aiah Ibrahim (My GitHub: aiahibrahim)</title>
-    <link href="style.css" rel="stylesheet" />
-    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TV Show Project | Aiah Ibrahim (My GitHub: aiahibrahim)</title>
+  <link href="style.css" rel="stylesheet" />
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+</head>
+<body>
+  <h1>All Episodes of the TV Show</h1>
 
-  <body>
-    <h1>All Episodes of the TV Show</h1>
-    <label>
-      Search <input type="search" id="q" name="q" placeholder="Search term"  /> 🔍
-      <datalist id="episode-datalist">
-        <!-- Options will be populated by JavaScript -->
-      </datalist>
-    </label>
-    
-    <label for="episode-select">Select an Episode:</label>
-    <select id="episode-select">
-      <option value="">All Episodes</option>
-      <!-- Options will be dynamically added via JavaScript -->
-    </select>
-     <!-- This will show how many episodes match the search -->
-     <p id="episode-count">0 episode(s) found</p>
-     
-    <div id="episode-container"></div>
+  <!-- Search bar -->
+  <input type="text" id="search-input" placeholder="Search episodes..." />
+  <p id="search-result-count">Displaying all episodes</p>
 
-    <!-- Template for each episode card -->
-    <template id="episode-card-template">
-      <div class="episode-card">
-        <h3><span class="episode-name"></span> <span class="episode-number"></span></h3>
-        <img src="" alt="Episode Image" />
-        <p data-summary></p>
-      </div>
-    </template>
+  <!-- Episode selector -->
+  <label for="episode-selector">Jump to an episode:</label>
+  <select id="episode-selector">
+    <option value="">Select an episode</option>
+  </select>
 
-    <!-- TVMaze Credits Section -->
-    <footer>
-      <p>
-        Data provided by <a href="https://www.tvmaze.com/" target="_blank">TVMaze.com</a>
-      </p>
-    </footer>
-    <div id="root">
+  <div id="episode-container"></div>
+
+  <!-- Template for each episode card -->
+  <template id="episode-card-template">
+    <div class="episode-card">
+      <h3><span class="episode-name"></span></h3>
+      <img src="" alt="Episode Image" />
+      <p data-summary></p>
     </div>
+  </template>
 
-    <!-- Loads a provided function called getAllEpisodes() which returns all episodes -->
-    <script src="episodes.js" defer></script>
+  <!-- TVMaze Credits Section -->
+  <footer>
+    <p>
+      Data provided by <a href="https://www.tvmaze.com/" target="_blank">TVMaze.com</a>
+    </p>
+  </footer>
 
-    <!-- Loads YOUR javascript code -->
-    <script src="script.js" defer></script>
-  </body>
+  <script src="script.js" defer></script>
+</body>
 </html>
